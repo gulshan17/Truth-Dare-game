@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void spin(View view){
 
-        int newDirection = random.nextInt(3600) + 720;
+        int newDirection = random.nextInt(17000) + 720;
         float pivotX = imageView.getWidth() / 2;
         float pivotY = imageView.getHeight() / 2;
 
         Animation rotate = new RotateAnimation(lastDirection, newDirection, pivotX, pivotY);
-        rotate.setDuration(random.nextInt(10000) + 2000 - random.nextInt(5000));
+        rotate.setDuration(random.nextInt(10000) + 2000);
         rotate.setFillAfter(true);
         lastDirection = newDirection;
 
